@@ -7,7 +7,6 @@ export const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
     padding: 20,
-
   },
   title: {
     fontSize: 30,
@@ -35,20 +34,39 @@ export const styles = StyleSheet.create({
   subtitle: {
     fontSize: 22,
     fontWeight: "600",
-    color: "#fff",
+    color: "#edcc0eff",
     marginBottom: 10,
   },
+
   text: {
     fontSize: 16,
     color: "#e0e0e0",
-    textAlign: "сenter", 
+    textAlign: "justify",
+    lineHeight: 26,
+  },
+  achievementsText: {
+    fontSize: 16,
+    color: "#e0e0e0",
+    textAlign: "center",
     lineHeight: 26,
   },
   link: {
-  fontSize: 18,
-  color: "#edcc0eff",
-  marginVertical: 5,
-  textDecorationLine: "underline",
-},
+    fontSize: 18,
+    color: "#edcc0eff",
+    marginVertical: 5,
+    textDecorationLine: "underline",
+  },
+  contentImage: {
+    width: 320,
+    height: 180,
+    resizeMode: "cover",
+    borderRadius: 10,
+    marginVertical: 20,
+  },
+  link: {
+    fontSize: 18,
+    color: "#edcc0eff",
+    marginVertical: 5,
+    textDecorationLine: "underline",
+  },
 });
-
