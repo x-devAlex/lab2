@@ -1,19 +1,15 @@
-import { View, Text, StatusBar, Image } from "react-native";
-import { styles } from "../../src/styles";
+import { StatusBar} from "react-native";
+import { ThemedView } from "../../src/components/ThemedView";
+import { ThemedText } from "../../src/components/ThemedText";
+import { ThemedLogo } from "../../src/components/ThemedLogo";
+import { styles } from "../../src/styles/global";
 
 export default function Home() {
   return (
-    <View style={styles.container}>
+    <ThemedView style={styles.container}>
       <StatusBar barStyle="light-content" />
-
-      <View style={styles.logoContainer}>
-        <Image
-          style={styles.image}
-          source={require("../../assets/barcelona.png")}
-        />
-      </View>
-
-      <Text style={styles.subtitle}>Welcome to FC Barcelona App!</Text>
-    </View>
+      <ThemedLogo source={require("../../assets/images/content/barcelona.png")} />
+      <ThemedText type="subtitle">Welcome to FC Barcelona App!</ThemedText>
+    </ThemedView>
   );
 }

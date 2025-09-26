@@ -1,27 +1,31 @@
 import { Tabs } from "expo-router";
 import { Ionicons, Foundation, Entypo } from "@expo/vector-icons";
+import { useTheme } from "../../src/context/ThemeContext";
+import { ThemeToggleButton } from "../../src/components/ThemeToggleButton";
 
 export default function TabsLayout() {
+  const { theme } = useTheme();
+
   return (
     <Tabs
       screenOptions={{
         headerStyle: {
-          backgroundColor: "#0a0a23",
+          backgroundColor: theme.header,
         },
-        headerTintColor: "#edcc0eff",
+        headerTintColor: theme.headerText,
         tabBarStyle: {
-          backgroundColor: "#0a0a23",
-          borderTopColor: "#edcc0eff",
+          backgroundColor: theme.header,
+          borderTopColor: theme.primary,
         },
-        tabBarActiveTintColor: "#edcc0eff",
-        tabBarInactiveTintColor: "gray",
+        tabBarActiveTintColor: theme.tabBarActive,
+        tabBarInactiveTintColor: theme.tabBarInactive,
+        headerRight: () => <ThemeToggleButton />,
       }}
     >
       <Tabs.Screen
         name="home"
         options={{
           title: "Home",
-
           tabBarIcon: ({ color, size }) => (
             <Ionicons name="home" size={size} color={color} />
           ),
